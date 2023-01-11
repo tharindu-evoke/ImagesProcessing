@@ -10,12 +10,17 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Resources\Eff1\" />
     <Folder Include="Resources\Eff2\" />
     <Folder Include="Resources\Eff3\" />
+    <Folder Include="Resources\Eff1\" />
+    <Folder Include="Resources\Eff2\" />
+    <Folder Include="Resources\Eff3\" />
+    <Folder Include="Resources\Row\" />
     <Folder Include="Resources\Row\" />
   </ItemGroup>
 

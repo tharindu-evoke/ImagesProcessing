@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tharindu\\source\\repos\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj": {}
+    "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tharindu\\source\\repos\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj": {
+    "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tharindu\\source\\repos\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
+        "projectUniqueName": "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
         "projectName": "ImagesProcessing",
-        "projectPath": "C:\\Users\\tharindu\\source\\repos\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
-        "packagesPath": "C:\\Users\\tharindu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tharindu\\source\\repos\\ImagesProcessing\\ImagesProcessing\\obj\\",
+        "projectPath": "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
+        "packagesPath": "C:\\Users\\thari\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tharindu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thari\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +43,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.17.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -64,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

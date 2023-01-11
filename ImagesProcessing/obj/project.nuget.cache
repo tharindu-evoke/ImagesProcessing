@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "dqNsZ5V+Epumn/gf5HwRfpsJAH7oP4mpB3nTZAIQBS1zew9AlNkV9KztUjXWRS0LnMvqqX7Smnu+gUKROrHQBA==",
+  "dgSpecHash": "HiErcvU1+htLRmFUYbd8ZbNVPnumjxAOBqfR13V94oioTsenLu/GY9IntnFbaZhEyO1UA+pGCiyfREx3kz7PSA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tharindu\\source\\repos\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
+  "projectFilePath": "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\tharindu\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+    "C:\\Users\\thari\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
+    "C:\\Users\\thari\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\thari\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

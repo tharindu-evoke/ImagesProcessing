@@ -1,5 +1,9 @@
-﻿using System.Security.Cryptography;
+﻿using System.Drawing;
+using System.Drawing.Imaging;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ImagesProcessing.Repositories
 {
@@ -38,9 +42,63 @@ namespace ImagesProcessing.Repositories
             }
         }
 
-        public bool Effect01(IFormFile imageFile, string name)
+        public void Effect01(IFormFile imageFile, string name)
+        {
+            string path = Path.Combine(_hostEnvironment.ContentRootPath, "Resources\\Eff1", name);
+
+            Bitmap bitmap = BitmapImage(imageFile);
+            bitmap = resize(bitmap, 100);
+            SaveBitmap(bitmap, path);
+        }
+
+        public void Effect02(IFormFile imageFile, string name)
         {
 
+        }
+
+        public void Effect03(IFormFile imageFile, string name)
+        {
+
+        }
+
+        private Bitmap BitmapImage(IFormFile imageFile)
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                imageFile.CopyToAsync(memoryStream);
+                using (Bitmap img = (Bitmap)System.Drawing.Image.FromStream(memoryStream))
+                {
+                    return img;
+                }
+            }
+        }
+
+        private void SaveBitmap(Bitmap image, string path) {
+            image.Save("flower.jpg", ImageFormat.Jpeg);
+
+            //using (var memoryStream = new MemoryStream(returns))
+            //{
+            //    using(FileStream file = new FileStream(path, FileMode.Create))
+            //    {
+            //        memoryStream.WriteTo(file);
+            //    }
+            //}
+            //source.Save(path, ImageFormat.Jpeg);
+        }
+
+        private Bitmap resize(Bitmap img, int size)
+        {
+            
+            return img;
+        }
+
+        private bool blur()
+        {
+            return false;
+        }
+
+        private bool grayscale()
+        {
             return false;
         }
     }
