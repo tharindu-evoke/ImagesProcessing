@@ -1,20 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>b3a2a4e4-3487-4003-a5ac-3007aaf1c4fc</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\E1\" />
-    <Folder Include="Resources\E2\" />
-    <Folder Include="Resources\E3\" />
-    <Folder Include="Resources\Upload\" />
+    <Folder Include="Resources\Eff1\" />
+    <Folder Include="Resources\Eff2\" />
+    <Folder Include="Resources\Eff3\" />
+    <Folder Include="Resources\Row\" />
   </ItemGroup>
 
 </Project>

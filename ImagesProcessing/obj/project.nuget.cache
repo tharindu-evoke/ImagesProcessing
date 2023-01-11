@@ -1,15 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YTtx8Ik2P4PFNDT52CZQdJvGAq+Wg8N8eqGcbtJlwLi0yMoHtUMceC2IqNfdoRNQrNwIVPjaESx6zixxSkO0qw==",
+  "dgSpecHash": "dqNsZ5V+Epumn/gf5HwRfpsJAH7oP4mpB3nTZAIQBS1zew9AlNkV9KztUjXWRS0LnMvqqX7Smnu+gUKROrHQBA==",
   "success": true,
-  "projectFilePath": "D:\\Coding\\VisualStudio\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
+  "projectFilePath": "C:\\Users\\tharindu\\source\\repos\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\thari\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\thari\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\thari\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "C:\\Users\\thari\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "C:\\Users\\thari\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "C:\\Users\\thari\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "C:\\Users\\tharindu\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
   ],
   "logs": []
 }

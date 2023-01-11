@@ -1,34 +1,36 @@
 ﻿using ImagesProcessing.Models;
 using ImagesProcessing.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ImagesProcessing.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ImageController : ControllerBase
+    public class ImageController : Controller
     {
-        private readonly ImageRepository _imageRepository;
+        private readonly IImageRepository _imageRepository;
 
-        public ImageController(ImageRepository imageRepository)
+        public ImageController(IImageRepository imageRepository)
         {
             _imageRepository = imageRepository;
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Image>> ConvertImages([FromForm]Image images)
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult Process(ImgSet dataset)
         {
             if (ModelState.IsValid)
             {
-                try
-                {
-                    //foreach(var imageSet in images)
-                    //{
-                        foreach (var img in images.ImgFile)
+                string imageName = "";
+                //try
+                //{
+                //foreach (ImgSet imageSet in dataset)
+                //{
+                        foreach (IFormFile img in dataset.ImageFile)
                         {
-                            string imageName = Convert.ToString(_imageRepository.SaveImage(img));
+                            imageName = Convert.ToString(_imageRepository.SaveImage(img));
 
                             //if(imageSet.Eff1 == true)
                             //{
@@ -46,17 +48,20 @@ namespace ImagesProcessing.Controllers
                             //}
                         }
                     //}
-
-                    return Ok();
-                }
-                catch(Exception e)
-                {
-                    return BadRequest(e);
-                }
+                    if(imageName == "")
+                    {
+                        return RedirectToAction("Privacy", "Home");
+                    }
+                    return RedirectToAction("Index", "Home");
+                //}
+                //catch (Exception e)
+                //{
+                //    return RedirectToAction("Index");
+                //}
             }
             else
             {
-                return BadRequest("Validation Faild!");
+                return RedirectToAction("Index");
             }
         }
     }

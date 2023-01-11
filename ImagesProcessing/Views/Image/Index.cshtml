@@ -1,0 +1,63 @@
+﻿@model ImgSet
+@{
+    ViewData["Title"] = "Image Processing";
+}
+
+<div>
+    <div class="container">
+        <div class="box_border">
+            <form method="post" asp-controller="Image" asp-action="Process" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex align-self-center">
+                            <input type="file" asp-for="ImageFile" class="form-control" id="imgFile" accept="image/png, image/jpeg, image/jpg" multiple required />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="d-flex justify-content-center">
+                            <div class="form-check">
+                                <input asp-for="Eff1" class="form-check-input" type="checkbox" value="" id="eff1" />
+                                <label class ="form-check-label" for="eff1">
+                                    Effect 1
+                                </label>
+                            </div>
+                            <br />
+                            <div class="form-check">
+                                <input asp-for="Eff2" class="form-check-input" type="checkbox" value="" id="eff2" />
+                                <label class="form-check-label" for="eff2">
+                                    Effect 2
+                                </label>
+                            </div>
+                            <br />
+                            <div class="form-check">
+                                <input asp-for="Eff3" class="form-check-input" type="checkbox" value="" id="eff3" />
+                                <label class="form-check-label" for="eff3">
+                                    Effect 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <div>
+                                <label for="radius" class="form-label">Radius</label>
+                                <input asp-for="Radius" type="range" class="form-range" id="radius">
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <label for="size" class="form-label">Size</label>
+                                </div>
+                                <div class="col-9">
+                                    <input type="number" asp-for="Size" class="form-control" id="size" />
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end m-3">
+                                <button type="submit" class="btn btn-success" id="btnSubmit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

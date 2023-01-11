@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using System.Security.Cryptography;
+using System.Text;
 
 namespace ImagesProcessing.Repositories
 {
@@ -11,62 +12,30 @@ namespace ImagesProcessing.Repositories
             _hostEnvironment = hostEnvironment;
         }
 
-        public async Task<string> SaveImage(IFormFile imageFile)
+        public string SaveImage(IFormFile imageFile)
         {
             //try
             //{
-                string imageName = new String(Path.GetFileNameWithoutExtension(imageFile.FileName).Take(10).ToArray()).Replace(' ', '-');
-                imageName = imageName + DateTime.Now.ToString("yymmssfff") + Path.GetExtension(imageFile.FileName);
-                var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, "Resources/Upload", imageName);
-                using (var fileStream = new FileStream(imagePath, FileMode.Create))
+                using (SHA1 sha1Hash = SHA1.Create())
                 {
-                    await imageFile.CopyToAsync(fileStream);
+                    byte[] sourceBytes = Encoding.UTF8.GetBytes(DateTime.Now.ToString("yymmssfff"));
+                    byte[] hashBytes = sha1Hash.ComputeHash(sourceBytes);
+                    string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
+
+                    string imageName = hash + Path.GetExtension(imageFile.FileName);
+                    var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, "Resources/Row", imageName);
+                    using (var fileStream = new FileStream(imagePath, FileMode.Create))
+                    {
+                        imageFile.CopyToAsync(fileStream);
+                    }
+
+                    return imageName;
                 }
-                return imageName;
             //}
             //catch (Exception e)
             //{
             //    return "Null";
             //}
-        }
-
-        public bool Effect01(IFormFile image, string name)
-        {
-            return true;
-
-            try
-            {
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
-        }
-
-        public bool Effect02(IFormFile image, string name)
-        {
-            return true;
-
-            try
-            {
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
-        }
-
-        public bool Effect03(IFormFile image, string name)
-        {
-            return true;
-
-            try
-            {
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
         }
     }
 }
