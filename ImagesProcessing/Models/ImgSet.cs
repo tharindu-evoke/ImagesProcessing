@@ -2,7 +2,7 @@
 {
     public class ImgSet
     {
-        public List<IFormFile> ImageFile { get; set; } 
+        public List<IFormFile>? ImageFile { get; set; } 
         public bool Eff1 { get; set; } = false;
         public bool Eff2 { get; set; } = false;
         public bool Eff3 { get; set; } = false;

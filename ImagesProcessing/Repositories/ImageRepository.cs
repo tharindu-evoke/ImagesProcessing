@@ -14,8 +14,8 @@ namespace ImagesProcessing.Repositories
 
         public string SaveImage(IFormFile imageFile)
         {
-            //try
-            //{
+            try
+            {
                 using (SHA1 sha1Hash = SHA1.Create())
                 {
                     byte[] sourceBytes = Encoding.UTF8.GetBytes(DateTime.Now.ToString("yymmssfff"));
@@ -31,11 +31,17 @@ namespace ImagesProcessing.Repositories
 
                     return imageName;
                 }
-            //}
-            //catch (Exception e)
-            //{
-            //    return "Null";
-            //}
+            }
+            catch (Exception e)
+            {
+                return "Null";
+            }
+        }
+
+        public bool Effect01(IFormFile imageFile, string name)
+        {
+
+            return false;
         }
     }
 }

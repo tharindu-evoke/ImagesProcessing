@@ -19,50 +19,44 @@ namespace ImagesProcessing.Controllers
             return View();
         }
 
-        public IActionResult Process(ImgSet dataset)
+        public IActionResult Process([FromForm]ImgSet dataset)
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 string imageName = "";
-                //try
-                //{
-                //foreach (ImgSet imageSet in dataset)
-                //{
-                        foreach (IFormFile img in dataset.ImageFile)
+                try
+                {
+                    foreach (IFormFile img in dataset.ImageFile)
+                    {        
+                        imageName = Convert.ToString(_imageRepository.SaveImage(img));
+
+                        if (dataset.Eff1 == true)
                         {
-                            imageName = Convert.ToString(_imageRepository.SaveImage(img));
-
-                            //if(imageSet.Eff1 == true)
-                            //{
-                            //    bool s1 = _imageRepository.Effect01(img, imageName);
-                            //}
-
-                            //if (imageSet.Eff2 == true)
-                            //{
-                            //    bool s1 = _imageRepository.Effect02(img, imageName);
-                            //}
-
-                            //if (imageSet.Eff3 == true)
-                            //{
-                            //    bool s1 = _imageRepository.Effect03(img, imageName);
-                            //}
+                            bool s1 = _imageRepository.Effect01(img, imageName);
                         }
+
+                    //if (imageSet.Eff2 == true)
+                    //{
+                    //    bool s1 = _imageRepository.Effect02(img, imageName);
                     //}
-                    if(imageName == "")
-                    {
-                        return RedirectToAction("Privacy", "Home");
-                    }
+
+                    //if (imageSet.Eff3 == true)
+                    //{
+                    //    bool s1 = _imageRepository.Effect03(img, imageName);
+                    //}
+                }
+
                     return RedirectToAction("Index", "Home");
-                //}
-                //catch (Exception e)
-                //{
-                //    return RedirectToAction("Index");
-                //}
-            }
-            else
-            {
-                return RedirectToAction("Index");
-            }
+                }
+                catch (Exception e)
+                {
+                    return RedirectToAction("Index");
+                }
+            //}
+            //else
+            //{
+            //    return RedirectToAction("Index", "Home");
+            //}
         }
     }
 }
