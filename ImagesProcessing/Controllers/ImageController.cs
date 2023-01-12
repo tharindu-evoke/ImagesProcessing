@@ -24,6 +24,7 @@ namespace ImagesProcessing.Controllers
             //if (ModelState.IsValid)
             //{
                 string imageName = "";
+                ViewBag.Message = "";
                 try
                 {
                     foreach (IFormFile img in dataset.ImageFile)

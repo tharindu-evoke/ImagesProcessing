@@ -5,6 +5,19 @@
 
 <div>
     <div class="container">
+
+        @if (ViewBag.Message != null)
+        {
+            <script type="text/javascript">
+                window.onload = function () {
+                    alert("@ViewBag.Message");
+                };
+            </script>
+        }
+
+        @*@Html.CheckBox("isActive", true);
+        @Html.CheckBoxFor(m => m.isActive);*@
+
         <div class="box_border">
             <form method="post" asp-controller="Image" asp-action="Process" enctype="multipart/form-data">
                 <div class="row">
