@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj": {}
+    "F:\\Github\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj": {
+    "F:\\Github\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
+        "projectUniqueName": "F:\\Github\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
         "projectName": "ImagesProcessing",
-        "projectPath": "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
-        "packagesPath": "C:\\Users\\thari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\obj\\",
+        "projectPath": "F:\\Github\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
+        "packagesPath": "C:\\Users\\tharindu\\.nuget\\packages\\",
+        "outputPath": "F:\\Github\\ImagesProcessing\\ImagesProcessing\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\thari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tharindu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

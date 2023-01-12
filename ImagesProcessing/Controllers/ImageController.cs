@@ -28,6 +28,7 @@ namespace ImagesProcessing.Controllers
                 {
                     foreach (IFormFile img in dataset.ImageFile)
                     {        
+
                         imageName = Convert.ToString(_imageRepository.SaveImage(img));
 
                         if (dataset.Eff1 == true)
