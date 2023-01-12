@@ -1,12 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "HiErcvU1+htLRmFUYbd8ZbNVPnumjxAOBqfR13V94oioTsenLu/GY9IntnFbaZhEyO1UA+pGCiyfREx3kz7PSA==",
+  "dgSpecHash": "yrOZvNrWB1VOf73jzjaHI5GK3XJUV1/ifKdvqnJsbZwWWVZyqIlwcKxh4KV/6b+YlvxkfxVCZTaajM7/sFqKXQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\thari\\OneDrive\\Documents\\ImagesProcessing\\ImagesProcessing\\ImagesProcessing.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\thari\\.nuget\\packages\\microsoft.io.recyclablememorystream\\2.2.0\\microsoft.io.recyclablememorystream.2.2.0.nupkg.sha512",
+    "C:\\Users\\thari\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\thari\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512",
     "C:\\Users\\thari\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
-    "C:\\Users\\thari\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+    "C:\\Users\\thari\\.nuget\\packages\\sixlabors.imagesharp\\2.1.3\\sixlabors.imagesharp.2.1.3.nupkg.sha512",
+    "C:\\Users\\thari\\.nuget\\packages\\sixlabors.imagesharp.web\\2.0.2\\sixlabors.imagesharp.web.2.0.2.nupkg.sha512",
+    "C:\\Users\\thari\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\thari\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\thari\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,9 +1,11 @@
 ﻿using System.Drawing;
-using System.Drawing.Imaging;
-using System.Runtime.InteropServices;
+//using System.Drawing.Drawing2D;
 using System.Security.Cryptography;
 using System.Text;
-using static System.Net.Mime.MediaTypeNames;
+using Microsoft.Extensions.Hosting;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+using Image = SixLabors.ImageSharp.Image;
 
 namespace ImagesProcessing.Repositories
 {
@@ -42,64 +44,75 @@ namespace ImagesProcessing.Repositories
             }
         }
 
-        public void Effect01(IFormFile imageFile, string name)
+        public void Effect01(string name)
         {
+            string getPath = Path.Combine(_hostEnvironment.ContentRootPath, "Resources\\Row", name);
+            string setPath = Path.Combine(_hostEnvironment.ContentRootPath, "Resources\\Eff1", name);
+            resize(getPath, setPath, 100);
+
+            //Blur
             string path = Path.Combine(_hostEnvironment.ContentRootPath, "Resources\\Eff1", name);
-
-            Bitmap bitmap = BitmapImage(imageFile);
-            bitmap = resize(bitmap, 100);
-            SaveBitmap(bitmap, path);
+            blur(path, path, 2);
         }
 
-        public void Effect02(IFormFile imageFile, string name)
+        public void Effect02(string name)
         {
-
+            string getPath = Path.Combine(_hostEnvironment.ContentRootPath, "Resources\\Row", name);
+            string setPath = Path.Combine(_hostEnvironment.ContentRootPath, "Resources\\Eff2", name);
+            resize(getPath, setPath, 100);
         }
 
-        public void Effect03(IFormFile imageFile, string name)
+        public void Effect03(string name)
         {
+            string getPath = Path.Combine(_hostEnvironment.ContentRootPath, "Resources\\Row", name);
+            string setPath = Path.Combine(_hostEnvironment.ContentRootPath, "Resources\\Eff3", name);
+            resize(getPath, setPath, 100);
 
+            //Blur
+            string path = Path.Combine(_hostEnvironment.ContentRootPath, "Resources\\Eff3", name);
+            blur(path, path, 5);
+
+            //Grayscale
+            path = Path.Combine(_hostEnvironment.ContentRootPath, "Resources\\Eff3", name);
+            grayscale(path, path);
         }
 
-        private Bitmap BitmapImage(IFormFile imageFile)
+
+        private void resize(string getPath, string setPath, int size)
         {
-            using (var memoryStream = new MemoryStream())
+            try
             {
-                imageFile.CopyToAsync(memoryStream);
-                using (Bitmap img = (Bitmap)System.Drawing.Image.FromStream(memoryStream))
+                using (Image image = Image.Load(getPath))
                 {
-                    return img;
+                    image.Mutate(x => x.Resize(size, size));
+                    image.Save(setPath);
+                }
+            } 
+            catch(Exception e) { }
+        }
+
+        private void blur(string getPath, string setPath, int blur)
+        {
+            try { 
+                using (Image image = Image.Load(getPath))
+                {
+                    image.Mutate(x => x.GaussianBlur(blur));
+                    image.Save(setPath);
                 }
             }
+            catch (Exception e) { }
         }
 
-        private void SaveBitmap(Bitmap image, string path) {
-            image.Save("flower.jpg", ImageFormat.Jpeg);
-
-            //using (var memoryStream = new MemoryStream(returns))
-            //{
-            //    using(FileStream file = new FileStream(path, FileMode.Create))
-            //    {
-            //        memoryStream.WriteTo(file);
-            //    }
-            //}
-            //source.Save(path, ImageFormat.Jpeg);
-        }
-
-        private Bitmap resize(Bitmap img, int size)
+        private void grayscale(string getPath, string setPath)
         {
-            
-            return img;
-        }
-
-        private bool blur()
-        {
-            return false;
-        }
-
-        private bool grayscale()
-        {
-            return false;
+            try { 
+                using (Image image = Image.Load(getPath))
+                {
+                    image.Mutate(x => x.Grayscale());
+                    image.Save(setPath);
+                }
+            }
+            catch (Exception e) { }
         }
     }
 }

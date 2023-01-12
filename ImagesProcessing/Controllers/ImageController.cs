@@ -24,40 +24,39 @@ namespace ImagesProcessing.Controllers
             //if (ModelState.IsValid)
             //{
                 string imageName = "";
-                //try
-                //{
+                try
+                {
                     foreach (IFormFile img in dataset.ImageFile)
                     {        
                         imageName = Convert.ToString(_imageRepository.SaveImage(img));
 
-                    dataset.Eff1 = true;
                         if (dataset.Eff1 == true)
                         {
-                            _imageRepository.Effect01(img, imageName);
+                            _imageRepository.Effect01(imageName);
                         }
 
                         if (dataset.Eff2 == true)
                         {
-                            _imageRepository.Effect02(img, imageName);
+                            _imageRepository.Effect02(imageName);
                         }
 
                         if (dataset.Eff3 == true)
                         {
-                            _imageRepository.Effect03(img, imageName);
+                            _imageRepository.Effect03(imageName);
                         }
                     }
 
                     return RedirectToAction("Index", "Home");
-                //}
-                //catch (Exception e)
-                //{
-                //    return RedirectToAction("Index");
-                //}
-            //}
-            //else
-            //{
-            //    return RedirectToAction("Index", "Home");
-            //}
-        }
+                }
+                catch (Exception e)
+                {
+                    return RedirectToAction("Index");
+                }
+    //}
+    //else
+    //{
+    //    return RedirectToAction("Index", "Home");
+    //}
+}
     }
 }
